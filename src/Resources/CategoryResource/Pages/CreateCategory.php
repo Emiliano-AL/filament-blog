@@ -11,6 +11,6 @@ class CreateCategory extends CreateRecord
 
     public static function getLabel(): string
     {
-        return trans('filament-blog::cafali-blog.categories.create_page');
+        return __('filament-blog::cafali-blog.categories.create_page');
     }
 }

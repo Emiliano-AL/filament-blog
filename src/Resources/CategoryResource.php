@@ -24,7 +24,7 @@ class CategoryResource extends Resource
 
     public static function getNavigationLabel(): string
     {
-        return trans('filament-blog::cafali-blog.categories.title_page');
+        return __('filament-blog::cafali-blog.categories.title_page');
     }
 
     public static function form(Form $form): Form
@@ -38,11 +38,11 @@ class CategoryResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name')
-                    ->label(trans('filament-blog::cafali-blog.categories.name'))
+                    ->label(__('filament-blog::cafali-blog.categories.name'))
                     ->searchable(),
                 Tables\Columns\TextColumn::make('slug'),
                 Tables\Columns\TextColumn::make('posts_count')
-                    ->label(trans('filament-blog::cafali-blog.categories.posts_count'))
+                    ->label(__('filament-blog::cafali-blog.categories.posts_count'))
                     ->badge()
                     ->counts('posts'),
                 Tables\Columns\TextColumn::make('created_at')
@@ -59,16 +59,16 @@ class CategoryResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make()
-                    ->label(trans('filament-blog::cafali-blog.edit')),
+                    ->label(__('filament-blog::cafali-blog.edit')),
                 Tables\Actions\ViewAction::make()
-                    ->label(trans('filament-blog::cafali-blog.view')),
+                    ->label(__('filament-blog::cafali-blog.view')),
                 Tables\Actions\DeleteAction::make()
-                    ->label(trans('filament-blog::cafali-blog.delete')),
+                    ->label(__('filament-blog::cafali-blog.delete')),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make()
-                    ->label(trans('filament-blog::cafali-blog.delete')),
+                    ->label(__('filament-blog::cafali-blog.delete')),
                 ]),
             ]);
     }
