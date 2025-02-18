@@ -36,6 +36,11 @@ class PostResource extends Resource
 
     protected static SubNavigationPosition $subNavigationPosition = SubNavigationPosition::Top;
 
+    public static function getNavigationLabel(): string
+    {
+        return trans('filament-blog::cafali-blog.posts.title_page');
+    }
+
     public static function getNavigationBadge(): ?string
     {
         return strval(Post::count());
@@ -53,6 +58,7 @@ class PostResource extends Resource
             ->deferLoading()
             ->columns([
                 Tables\Columns\TextColumn::make('title')
+                    ->label(trans('filament-blog::cafali-blog.posts.title'))
                     ->description(function (Post $record) {
                         return Str::limit($record->sub_title, 40);
                     })
@@ -62,16 +68,19 @@ class PostResource extends Resource
                     ->color(function ($state) {
                         return $state->getColor();
                     }),
-                Tables\Columns\ImageColumn::make('cover_photo_path')->label('Cover Photo'),
+                Tables\Columns\ImageColumn::make('cover_photo_path')
+                    ->label(trans('filament-blog::cafali-blog.posts.cover_photo')),
 
                 UserPhotoName::make('user')
-                    ->label('Author'),
+                    ->label(trans('filament-blog::cafali-blog.posts.author')),
 
                 Tables\Columns\TextColumn::make('created_at')
+                    ->label(trans('filament-blog::cafali-blog.posts.created_at'))
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
+                    ->label(trans('filament-blog::cafali-blog.posts.updated_at'))
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
