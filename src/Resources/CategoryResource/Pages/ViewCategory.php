@@ -16,6 +16,7 @@ class ViewCategory extends ViewRecord
         return [
             EditAction::make()
                 ->slideOver()
+                ->label(__('filament-blog::cafali-blog.categories.edit_action'))
                 ->form(Category::getForm()),
         ];
     }

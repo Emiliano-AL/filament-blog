@@ -34,6 +34,7 @@ class Category extends Model
         return [
             TextInput::make('name')
                 ->live(true)
+                ->label(__('filamentblog::cafali-blog.categories.name'))
                 ->afterStateUpdated(function (Get $get, Set $set, ?string $operation, ?string $old, ?string $state) {
 
                     $set('slug', Str::slug($state));

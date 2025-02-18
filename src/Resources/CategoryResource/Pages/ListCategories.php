@@ -13,7 +13,13 @@ class ListCategories extends ListRecords
     protected function getHeaderActions(): array
     {
         return [
-            Actions\CreateAction::make(),
+            Actions\CreateAction::make()
+                ->label(__('filament-blog::cafali-blog.categories.create_action')),
         ];
+    }
+
+    public static function getLabel(): string
+    {
+        return __('filament-blog::cafali-blog.categories.title_page');
     }
 }

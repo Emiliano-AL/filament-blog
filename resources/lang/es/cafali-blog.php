@@ -12,6 +12,9 @@ return [
         "updated_at" => "Actualizado en",
 
         "create_page" => "Crear categoría",
+        "create_action" => "Crear categoría",
+        "delete_action" => "Eliminar categoría",
+        "edit_page" => "Editar categoría",
     ],
     "posts" => [
         "title_page" => "Posts",
