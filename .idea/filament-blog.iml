@@ -5,8 +5,6 @@
       <sourceFolder url="file://$MODULE_DIR$/database/factories" isTestSource="false" packagePrefix="Firefly\FilamentBlog\Database\Factories\" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" packagePrefix="Firefly\FilamentBlog\" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="Firefly\FilamentBlog\Tests\" />
-      <sourceFolder url="file://$MODULE_DIR$/tests/Feature" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/tests/Unit" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/awcodes/filament-tiptap-editor" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/blade-ui-kit/blade-heroicons" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/blade-ui-kit/blade-icons" />
